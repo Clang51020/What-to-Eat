@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C429DCA529633A8400B23852 /* CurrentLoggedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429DCA429633A8400B23852 /* CurrentLoggedUser.swift */; };
 		C46E321D29628A50000DF094 /* What_to_EatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E321C29628A50000DF094 /* What_to_EatApp.swift */; };
 		C46E321F29628A50000DF094 /* InitialLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E321E29628A50000DF094 /* InitialLaunchView.swift */; };
 		C46E322129628A52000DF094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46E322029628A52000DF094 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C429DCA429633A8400B23852 /* CurrentLoggedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLoggedUser.swift; sourceTree = "<group>"; };
 		C46E321929628A50000DF094 /* What to Eat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What to Eat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46E321C29628A50000DF094 /* What_to_EatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_to_EatApp.swift; sourceTree = "<group>"; };
 		C46E321E29628A50000DF094 /* InitialLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLaunchView.swift; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C429DCA329633A7100B23852 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C429DCA429633A8400B23852 /* CurrentLoggedUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C46E321029628A50000DF094 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +81,7 @@
 			children = (
 				C46E321C29628A50000DF094 /* What_to_EatApp.swift */,
 				C46E323E29628E6A000DF094 /* GoogleService-Info.plist */,
+				C429DCA329633A7100B23852 /* Models */,
 				C46E323C29628D7F000DF094 /* Views */,
 				C46E323D29628D92000DF094 /* Services */,
 				C46E322029628A52000DF094 /* Assets.xcassets */,
@@ -187,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C429DCA529633A8400B23852 /* CurrentLoggedUser.swift in Sources */,
 				C46E323B29628D79000DF094 /* MailchimpMasterService.swift in Sources */,
 				C46E321F29628A50000DF094 /* InitialLaunchView.swift in Sources */,
 				C46E321D29628A50000DF094 /* What_to_EatApp.swift in Sources */,
