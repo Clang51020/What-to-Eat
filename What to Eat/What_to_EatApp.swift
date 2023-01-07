@@ -16,7 +16,7 @@ struct What_to_EatApp: App {
     
     init() {
         FirebaseApp.configure()
-        try? Mailchimp.initialize(token: "CHANGE TO UPDATED MAILCHIMP KEY", autoTagContacts: true, debugMode: false)
+        try? Mailchimp.initialize(token: "5fd70b88c0e97f59f66afc2878f4c033-us14", autoTagContacts: true, debugMode: false)
     }
     
     var body: some Scene {
