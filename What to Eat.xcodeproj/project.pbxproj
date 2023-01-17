@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C429DCA529633A8400B23852 /* CurrentLoggedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429DCA429633A8400B23852 /* CurrentLoggedUser.swift */; };
+		C43A71C3296A1AFA0061538A /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = C43A71C2296A1AFA0061538A /* RevenueCat */; };
+		C43A71C6296A1CE60061538A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C43A71C5296A1CE60061538A /* FirebaseMessaging */; };
 		C46E321D29628A50000DF094 /* What_to_EatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E321C29628A50000DF094 /* What_to_EatApp.swift */; };
 		C46E321F29628A50000DF094 /* InitialLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E321E29628A50000DF094 /* InitialLaunchView.swift */; };
 		C46E322129628A52000DF094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46E322029628A52000DF094 /* Assets.xcassets */; };
@@ -21,6 +23,7 @@
 		C46E323929628D6C000DF094 /* FirebaseMasterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E323829628D6C000DF094 /* FirebaseMasterService.swift */; };
 		C46E323B29628D79000DF094 /* MailchimpMasterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E323A29628D79000DF094 /* MailchimpMasterService.swift */; };
 		C46E323F29628E6A000DF094 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C46E323E29628E6A000DF094 /* GoogleService-Info.plist */; };
+		C478EEDC29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = C478EEDB29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,7 @@
 		C46E323829628D6C000DF094 /* FirebaseMasterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMasterService.swift; sourceTree = "<group>"; };
 		C46E323A29628D79000DF094 /* MailchimpMasterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailchimpMasterService.swift; sourceTree = "<group>"; };
 		C46E323E29628E6A000DF094 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C478EEDB29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsMaster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,8 +44,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43A71C6296A1CE60061538A /* FirebaseMessaging in Frameworks */,
 				C46E323029628B67000DF094 /* FirebaseCrashlytics in Frameworks */,
 				C46E323229628B67000DF094 /* FirebaseFirestore in Frameworks */,
+				C43A71C3296A1AFA0061538A /* RevenueCat in Frameworks */,
 				C46E322C29628B67000DF094 /* FirebaseAnalytics in Frameworks */,
 				C46E323429628B67000DF094 /* FirebaseStorage in Frameworks */,
 				C46E323729628C25000DF094 /* MailchimpSDK in Frameworks */,
@@ -60,11 +66,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		C43A71C4296A1CE60061538A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C46E321029628A50000DF094 = {
 			isa = PBXGroup;
 			children = (
 				C46E321B29628A50000DF094 /* What to Eat */,
 				C46E321A29628A50000DF094 /* Products */,
+				C43A71C4296A1CE60061538A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +125,7 @@
 			children = (
 				C46E323829628D6C000DF094 /* FirebaseMasterService.swift */,
 				C46E323A29628D79000DF094 /* MailchimpMasterService.swift */,
+				C478EEDB29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -138,6 +153,8 @@
 				C46E323129628B67000DF094 /* FirebaseFirestore */,
 				C46E323329628B67000DF094 /* FirebaseStorage */,
 				C46E323629628C25000DF094 /* MailchimpSDK */,
+				C43A71C2296A1AFA0061538A /* RevenueCat */,
+				C43A71C5296A1CE60061538A /* FirebaseMessaging */,
 			);
 			productName = "What to Eat";
 			productReference = C46E321929628A50000DF094 /* What to Eat.app */;
@@ -170,6 +187,7 @@
 			packageReferences = (
 				C46E322A29628B67000DF094 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				C46E323529628C25000DF094 /* XCRemoteSwiftPackageReference "Mailchimp-SDK-iOS" */,
+				C43A71C1296A1AFA0061538A /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = C46E321A29628A50000DF094 /* Products */;
 			projectDirPath = "";
@@ -201,6 +219,7 @@
 				C429DCA529633A8400B23852 /* CurrentLoggedUser.swift in Sources */,
 				C46E323B29628D79000DF094 /* MailchimpMasterService.swift in Sources */,
 				C46E321F29628A50000DF094 /* InitialLaunchView.swift in Sources */,
+				C478EEDC29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift in Sources */,
 				C46E321D29628A50000DF094 /* What_to_EatApp.swift in Sources */,
 				C46E323929628D6C000DF094 /* FirebaseMasterService.swift in Sources */,
 			);
@@ -326,7 +345,7 @@
 		C46E322829628A52000DF094 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconSet;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -334,6 +353,8 @@
 				DEVELOPMENT_TEAM = CJ6UT2W89X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "What to Eat? IDK";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -359,7 +380,7 @@
 		C46E322929628A52000DF094 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconSet;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -367,6 +388,8 @@
 				DEVELOPMENT_TEAM = CJ6UT2W89X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "What to Eat? IDK";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -413,6 +436,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C43A71C1296A1AFA0061538A /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		C46E322A29628B67000DF094 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -432,6 +463,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C43A71C2296A1AFA0061538A /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C43A71C1296A1AFA0061538A /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
+		};
+		C43A71C5296A1CE60061538A /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C46E322A29628B67000DF094 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
 		C46E322B29628B67000DF094 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C46E322A29628B67000DF094 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

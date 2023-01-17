@@ -12,11 +12,12 @@ import SwiftUI
 
 class FirebaseMaster: ObservableObject {
     
-    var auth: Auth
-    var firestore: Firestore
-    var storage: Storage
-    @Published var currentSignedInUser: CurrentLoggedUser?
+    var auth: Auth // on initialization stores the Auth.auth() service.
+    var firestore: Firestore // on initialization stores the Firestore.firestore() service.
+    var storage: Storage // on initialization stores the Storage.storage() service.
+    @Published var currentSignedInUser: CurrentLoggedUser? // value that stores the current signed in users information after authenticated
     @AppStorage("userSignedIn") var userSignedIn: Bool = false // stored value to persist login state for user when closing app
+    @AppStorage("UserOnboarded") var userOnboarded: Bool = false // store value to persist user being onboarded after first intial launch
     
     init() {
         self.auth = Auth.auth()

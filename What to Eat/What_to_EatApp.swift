@@ -6,6 +6,7 @@
 //
 
 import Firebase
+import FirebaseAnalytics
 import MailchimpSDK
 import SwiftUI
 
@@ -13,6 +14,7 @@ import SwiftUI
 struct What_to_EatApp: App {
     
     @StateObject var fbMaster = FirebaseMaster()
+    @StateObject var fbanalytics = FirebaseAnalyticsMaster()
     
     init() {
         FirebaseApp.configure()
@@ -23,6 +25,7 @@ struct What_to_EatApp: App {
         WindowGroup {
             InitialLaunchView()
                 .environmentObject(fbMaster)
+                .environmentObject(fbanalytics)
         }
     }
 }
