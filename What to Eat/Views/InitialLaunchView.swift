@@ -13,16 +13,17 @@ struct InitialLaunchView: View {
     @EnvironmentObject var fbMaster: FirebaseMaster
     @ObservedObject var analytics = FirebaseAnalyticsMaster.shared
     @AppStorage("onboardingStep") var onboardingStep: Int = 0
+    @State var isBack: Bool = false
     
     var body: some View {
         
         switch onboardingStep {
-        case 0: WelcomeScreen
-        case 1: SearchOverview
-        case 2: LocationRequest
-        case 3: AddingPlaces
-        case 4: RouletteResults
-        case 5: UserInfoAccountCreation
+        case 0: WelcomeScreen.onAppear() { analytics.recordScreen(screen: "Welcome Screen - Onboarding")}
+        case 1: SearchOverview.onAppear() { analytics.recordScreen(screen: "Search Overview - Onboarding")}
+        case 2: LocationRequest.onAppear() { analytics.recordScreen(screen: "Location Request - Onboarding")}
+        case 3: AddingPlaces.onAppear() { analytics.recordScreen(screen: "Adding Places - Onboarding")}
+        case 4: RouletteResults.onAppear() { analytics.recordScreen(screen: "Roulette Results - Onboarding")}
+        case 5: UserInfoAccountCreation.onAppear() { analytics.recordScreen(screen: "Initial User Creation - Onboarding")}
         case 6: SplashScreen // replace this with the TabView once that is created.
         default: WelcomeScreen
         }
