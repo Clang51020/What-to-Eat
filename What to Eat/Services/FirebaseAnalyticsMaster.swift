@@ -10,6 +10,9 @@ import FirebaseAnalytics
 import Foundation
 
 class FirebaseAnalyticsMaster: ObservableObject {
+    
+    static let shared = FirebaseAnalyticsMaster()
+    
     // MARK: Function to record a screenview
     func recordScreen(screen: String) {
         Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: screen])

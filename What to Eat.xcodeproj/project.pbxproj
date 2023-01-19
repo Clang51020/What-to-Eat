@@ -28,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		C429DCA429633A8400B23852 /* CurrentLoggedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLoggedUser.swift; sourceTree = "<group>"; };
+		C4527C4C2976531B00B7CB6B /* What-to-Eat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "What-to-Eat-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C46E321929628A50000DF094 /* What to Eat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What to Eat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46E321C29628A50000DF094 /* What_to_EatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_to_EatApp.swift; sourceTree = "<group>"; };
 		C46E321E29628A50000DF094 /* InitialLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLaunchView.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		C46E321B29628A50000DF094 /* What to Eat */ = {
 			isa = PBXGroup;
 			children = (
+				C4527C4C2976531B00B7CB6B /* What-to-Eat-Info.plist */,
 				C46E321C29628A50000DF094 /* What_to_EatApp.swift */,
 				C46E323E29628E6A000DF094 /* GoogleService-Info.plist */,
 				C429DCA329633A7100B23852 /* Models */,
@@ -353,8 +355,11 @@
 				DEVELOPMENT_TEAM = CJ6UT2W89X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "What-to-Eat-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "What to Eat? IDK";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location to tailor location results to those nearest to you.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to tailor location results to those nearest to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -388,8 +393,11 @@
 				DEVELOPMENT_TEAM = CJ6UT2W89X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "What-to-Eat-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "What to Eat? IDK";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use your location to tailor location results to those nearest to you.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to tailor location results to those nearest to you.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
