@@ -12,8 +12,9 @@ import SwiftUI
 struct InitialLaunchView: View {
     @EnvironmentObject var fbMaster: FirebaseMaster
     @ObservedObject var analytics = FirebaseAnalyticsMaster.shared
-    @AppStorage("onboardingStep") var onboardingStep: Int = 0
+    @AppStorage("onboardingStep") var onboardingStep: Int = 2
     @State var isBack: Bool = false
+    @ObservedObject var locationManager = LocationManager.shared
     
     var body: some View {
         
@@ -56,9 +57,42 @@ extension InitialLaunchView {
     }
     
     var LocationRequest: some View {
-        VStack {
-            Image(systemName: "house")
-            Text("Location Request View")
+        ZStack {
+            Color.purple.ignoresSafeArea()
+            VStack() {
+                Spacer()
+                Image(systemName: "paperplane.circle.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
+                    .padding(.bottom,32)
+                Text("Would you like to search for places nearby?")
+                    .font(.title)
+                    .multilineTextAlignment(.center)
+                Spacer()
+                Button {
+                    // action
+                } label: {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 30)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 100)
+                        Text("Allow Location Access")
+                            .foregroundColor(.purple)
+                    }
+                }
+
+                Button {
+                    onboardingStep += 1
+                } label: {
+                    Text("Maybe later")
+                }.padding(.bottom)
+
+            }.foregroundColor(.white)
+                .onAppear() {
+                    locationManager.checkIfLocationServicesEnabled()
+                }
         }
     }
     
@@ -66,6 +100,12 @@ extension InitialLaunchView {
         VStack {
             Image(systemName: "house")
             Text("Adding Places to Lists")
+            Button {
+                onboardingStep -= 1
+            } label: {
+                Text("Go Back")
+            }
+
         }
     }
     

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C429DCA529633A8400B23852 /* CurrentLoggedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429DCA429633A8400B23852 /* CurrentLoggedUser.swift */; };
+		C430CC2E297C6FF500349DE4 /* GooglePlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430CC2D297C6FF500349DE4 /* GooglePlacesService.swift */; };
+		C430CC30297C729A00349DE4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430CC2F297C729A00349DE4 /* LocationManager.swift */; };
 		C43A71C3296A1AFA0061538A /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = C43A71C2296A1AFA0061538A /* RevenueCat */; };
 		C43A71C6296A1CE60061538A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C43A71C5296A1CE60061538A /* FirebaseMessaging */; };
 		C46E321D29628A50000DF094 /* What_to_EatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E321C29628A50000DF094 /* What_to_EatApp.swift */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		C429DCA429633A8400B23852 /* CurrentLoggedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLoggedUser.swift; sourceTree = "<group>"; };
+		C430CC2D297C6FF500349DE4 /* GooglePlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesService.swift; sourceTree = "<group>"; };
+		C430CC2F297C729A00349DE4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C4527C4C2976531B00B7CB6B /* What-to-Eat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "What-to-Eat-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C46E321929628A50000DF094 /* What to Eat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What to Eat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46E321C29628A50000DF094 /* What_to_EatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_to_EatApp.swift; sourceTree = "<group>"; };
@@ -129,8 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				C46E323829628D6C000DF094 /* FirebaseMasterService.swift */,
+				C430CC2F297C729A00349DE4 /* LocationManager.swift */,
 				C46E323A29628D79000DF094 /* MailchimpMasterService.swift */,
 				C478EEDB29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift */,
+				C430CC2D297C6FF500349DE4 /* GooglePlacesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -223,11 +229,13 @@
 			files = (
 				C429DCA529633A8400B23852 /* CurrentLoggedUser.swift in Sources */,
 				C46E323B29628D79000DF094 /* MailchimpMasterService.swift in Sources */,
+				C430CC2E297C6FF500349DE4 /* GooglePlacesService.swift in Sources */,
 				C46E321F29628A50000DF094 /* InitialLaunchView.swift in Sources */,
 				C478EEDC29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift in Sources */,
 				C4AC893E297C420F00F95818 /* TabView.swift in Sources */,
 				C46E321D29628A50000DF094 /* What_to_EatApp.swift in Sources */,
 				C46E323929628D6C000DF094 /* FirebaseMasterService.swift in Sources */,
+				C430CC30297C729A00349DE4 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
