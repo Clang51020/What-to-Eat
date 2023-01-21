@@ -24,7 +24,7 @@ struct InitialLaunchView: View {
         case 3: AddingPlaces.onAppear() { analytics.recordScreen(screen: "Adding Places - Onboarding")}
         case 4: RouletteResults.onAppear() { analytics.recordScreen(screen: "Roulette Results - Onboarding")}
         case 5: UserInfoAccountCreation.onAppear() { analytics.recordScreen(screen: "Initial User Creation - Onboarding")}
-        case 6: SplashScreen // replace this with the TabView once that is created.
+        case 6: TabView().onAppear() { analytics.recordScreen(screen: "Tab View")}
         default: WelcomeScreen
         }
     }

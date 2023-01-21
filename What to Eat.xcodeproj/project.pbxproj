@@ -24,6 +24,7 @@
 		C46E323B29628D79000DF094 /* MailchimpMasterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E323A29628D79000DF094 /* MailchimpMasterService.swift */; };
 		C46E323F29628E6A000DF094 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C46E323E29628E6A000DF094 /* GoogleService-Info.plist */; };
 		C478EEDC29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = C478EEDB29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift */; };
+		C4AC893E297C420F00F95818 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC893D297C420F00F95818 /* TabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		C46E323A29628D79000DF094 /* MailchimpMasterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailchimpMasterService.swift; sourceTree = "<group>"; };
 		C46E323E29628E6A000DF094 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C478EEDB29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsMaster.swift; sourceTree = "<group>"; };
+		C4AC893D297C420F00F95818 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				C46E321E29628A50000DF094 /* InitialLaunchView.swift */,
+				C4AC893D297C420F00F95818 /* TabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				C46E323B29628D79000DF094 /* MailchimpMasterService.swift in Sources */,
 				C46E321F29628A50000DF094 /* InitialLaunchView.swift in Sources */,
 				C478EEDC29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift in Sources */,
+				C4AC893E297C420F00F95818 /* TabView.swift in Sources */,
 				C46E321D29628A50000DF094 /* What_to_EatApp.swift in Sources */,
 				C46E323929628D6C000DF094 /* FirebaseMasterService.swift in Sources */,
 			);
