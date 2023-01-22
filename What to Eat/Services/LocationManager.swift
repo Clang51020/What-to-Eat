@@ -13,13 +13,12 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var userLocation: CLLocation?
     
     func checkIfLocationServicesEnabled() {
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager = CLLocationManager()
-            locationManager!.delegate = self
-            userLocation = locationManager?.location
-        } else {
-            print("location services are not enabled.")
-        }
+            if CLLocationManager.locationServicesEnabled() {
+                self.locationManager = CLLocationManager()
+                self.locationManager!.delegate = self
+            } else {
+                print("location services are not enabled.")
+            }
     }
     
     private func checkLocationAuth() {
@@ -34,7 +33,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         case .denied:
             print("You have turned off location permission. Go into settings to change it.")
         case .authorizedAlways, .authorizedWhenInUse:
-            break
+            userLocation = locationManager.location
         @unknown default:
             break
         }

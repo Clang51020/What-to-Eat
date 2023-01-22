@@ -8,6 +8,7 @@
 import Firebase
 import FirebaseAnalytics
 import SwiftUI
+import CoreLocation
 
 struct InitialLaunchView: View {
     @EnvironmentObject var fbMaster: FirebaseMaster
@@ -58,20 +59,23 @@ extension InitialLaunchView {
     
     var LocationRequest: some View {
         ZStack {
-            Color.purple.ignoresSafeArea()
+            Color.brandPurple.ignoresSafeArea()
             VStack() {
                 Spacer()
-                Image(systemName: "paperplane.circle.fill")
+                Image("LocationSearch")
                     .resizable()
+                    .frame(width: 300, height: 300)
                     .scaledToFit()
-                    .frame(width: 200, height: 200)
                     .padding(.bottom,32)
                 Text("Would you like to search for places nearby?")
                     .font(.title)
                     .multilineTextAlignment(.center)
                 Spacer()
                 Button {
-                    // action
+                    locationManager.checkIfLocationServicesEnabled()
+                    if locationManager.userLocation != nil {
+                        onboardingStep += 1
+                    }
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 30)
@@ -79,7 +83,7 @@ extension InitialLaunchView {
                             .frame(maxWidth: .infinity)
                             .frame(height: 100)
                         Text("Allow Location Access")
-                            .foregroundColor(.purple)
+                            .foregroundColor(.brandPurple)
                     }
                 }
 

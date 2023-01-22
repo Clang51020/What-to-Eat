@@ -27,6 +27,7 @@
 		C46E323F29628E6A000DF094 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C46E323E29628E6A000DF094 /* GoogleService-Info.plist */; };
 		C478EEDC29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = C478EEDB29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift */; };
 		C4AC893E297C420F00F95818 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC893D297C420F00F95818 /* TabView.swift */; };
+		C4F8FC9D297D982300834E3C /* BrandingColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8FC9C297D982200834E3C /* BrandingColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		C46E323E29628E6A000DF094 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C478EEDB29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsMaster.swift; sourceTree = "<group>"; };
 		C4AC893D297C420F00F95818 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		C4F8FC9C297D982200834E3C /* BrandingColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandingColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				C4527C4C2976531B00B7CB6B /* What-to-Eat-Info.plist */,
 				C46E321C29628A50000DF094 /* What_to_EatApp.swift */,
+				C4F8FC9C297D982200834E3C /* BrandingColors.swift */,
 				C46E323E29628E6A000DF094 /* GoogleService-Info.plist */,
 				C429DCA329633A7100B23852 /* Models */,
 				C46E323C29628D7F000DF094 /* Views */,
@@ -233,6 +236,7 @@
 				C46E321F29628A50000DF094 /* InitialLaunchView.swift in Sources */,
 				C478EEDC29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift in Sources */,
 				C4AC893E297C420F00F95818 /* TabView.swift in Sources */,
+				C4F8FC9D297D982300834E3C /* BrandingColors.swift in Sources */,
 				C46E321D29628A50000DF094 /* What_to_EatApp.swift in Sources */,
 				C46E323929628D6C000DF094 /* FirebaseMasterService.swift in Sources */,
 				C430CC30297C729A00349DE4 /* LocationManager.swift in Sources */,
