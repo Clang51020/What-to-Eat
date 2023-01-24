@@ -13,9 +13,14 @@ import CoreLocation
 struct InitialLaunchView: View {
     @EnvironmentObject var fbMaster: FirebaseMaster
     @ObservedObject var analytics = FirebaseAnalyticsMaster.shared
-    @AppStorage("onboardingStep") var onboardingStep: Int = 2
-    @State var isBack: Bool = false
+    @AppStorage("onboardingStep") var onboardingStep: Int = 5
     @ObservedObject var locationManager = LocationManager.shared
+    @State var firstName: String = ""
+    @State var lastName: String = ""
+    @State var email: String = ""
+    @State var password1: String = ""
+    @State var password2: String = ""
+    @State var alertShowing: Bool = false
     
     var body: some View {
         
@@ -59,7 +64,7 @@ extension InitialLaunchView {
     
     var LocationRequest: some View {
         ZStack {
-            Color.brandPurple.ignoresSafeArea()
+            Color.white.ignoresSafeArea()
             VStack() {
                 Spacer()
                 Image("LocationSearch")
@@ -82,8 +87,9 @@ extension InitialLaunchView {
                             .padding()
                             .frame(maxWidth: .infinity)
                             .frame(height: 100)
+                            .foregroundColor(.primaryColor)
                         Text("Allow Location Access")
-                            .foregroundColor(.brandPurple)
+                            .foregroundColor(.white)
                     }
                 }
 
@@ -93,7 +99,7 @@ extension InitialLaunchView {
                     Text("Maybe later")
                 }.padding(.bottom)
 
-            }.foregroundColor(.white)
+            }.foregroundColor(.brandPurple)
                 .onAppear() {
                     locationManager.checkIfLocationServicesEnabled()
                 }
@@ -122,9 +128,38 @@ extension InitialLaunchView {
     
     var UserInfoAccountCreation: some View {
         VStack {
-            Image(systemName: "house")
             Text("User Information Account Creating Screens")
-        }
+                .padding(.vertical)
+            TextField("First Name", text: $firstName)
+            TextField("Last Name", text: $lastName)
+            TextField("Email Address", text: $email)
+            SecureField("Password One", text: $password1)
+            SecureField("Password Two", text: $password2)
+            Button {
+                if password1 == password2 {
+                    if firstName && lastName && email && password1 != "" {
+                        
+                    } else {
+                        alertShowing = true
+                    }
+                } else {
+                    alertShowing = true
+                }
+            } label: {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 30)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 100)
+                        .foregroundColor(.primaryColor)
+                    Text("Create Account")
+                        .foregroundColor(.brandPurple)
+                }
+            }.alert(isPresented: $alertShowing) {
+                Alert(title: Text("Passwords Do Not Match"), message: Text("The passwords you entered do not match. Please return and make sure your passwords match."), dismissButton: .default(Text("Return to Form")))
+            }
+
+        }.padding()
     }
 }
 
