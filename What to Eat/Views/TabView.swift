@@ -9,11 +9,21 @@ import SwiftUI
 
 struct TabView: View {
     @State var currentTab: Int = 0
+    @State var text: String = ""
     let tabs = ["Favorites", "Results", "Search", "Settings", "Profile"]
     let icons = ["heart.fill", "list.bullet.circle","plus.circle","gear","person.circle.fill"]
     
     var body: some View {
         VStack {
+            ZStack {
+                TextField("Holding Text", text: $text)
+                    .textFieldStyle(.plain)
+                    .padding()
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.brandPurple, lineWidth: 3)
+                    }.padding(.horizontal)
+            }
             Spacer()
             tabItems
         }

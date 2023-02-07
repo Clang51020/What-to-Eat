@@ -13,7 +13,7 @@ import CoreLocation
 struct InitialLaunchView: View {
     @EnvironmentObject var fbMaster: FirebaseMaster
     @ObservedObject var analytics = FirebaseAnalyticsMaster.shared
-    @AppStorage("onboardingStep") var onboardingStep: Int = 5
+    @AppStorage("onboardingStep") var onboardingStep: Int = 2
     @ObservedObject var locationManager = LocationManager.shared
     @State var firstName: String = ""
     @State var lastName: String = ""
@@ -64,7 +64,7 @@ extension InitialLaunchView {
     
     var LocationRequest: some View {
         ZStack {
-            Color.white.ignoresSafeArea()
+            Color.secondaryColor.ignoresSafeArea()
             VStack() {
                 Spacer()
                 Image("LocationSearch")
@@ -137,11 +137,7 @@ extension InitialLaunchView {
             SecureField("Password Two", text: $password2)
             Button {
                 if password1 == password2 {
-                    if firstName && lastName && email && password1 != "" {
-                        
-                    } else {
-                        alertShowing = true
-                    }
+                    
                 } else {
                     alertShowing = true
                 }

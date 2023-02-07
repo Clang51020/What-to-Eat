@@ -12,6 +12,10 @@
 		C430CC30297C729A00349DE4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C430CC2F297C729A00349DE4 /* LocationManager.swift */; };
 		C43A71C3296A1AFA0061538A /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = C43A71C2296A1AFA0061538A /* RevenueCat */; };
 		C43A71C6296A1CE60061538A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C43A71C5296A1CE60061538A /* FirebaseMessaging */; };
+		C45747EA298EE8D90082C31F /* CreateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45747E9298EE8D90082C31F /* CreateListView.swift */; };
+		C460B16229920EAC00A53061 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460B16129920EAC00A53061 /* SignInView.swift */; };
+		C460B1652992101F00A53061 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460B1642992101F00A53061 /* RoundedShape.swift */; };
+		C460B167299212E800A53061 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460B166299212E800A53061 /* CustomInputView.swift */; };
 		C46E321D29628A50000DF094 /* What_to_EatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E321C29628A50000DF094 /* What_to_EatApp.swift */; };
 		C46E321F29628A50000DF094 /* InitialLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E321E29628A50000DF094 /* InitialLaunchView.swift */; };
 		C46E322129628A52000DF094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46E322029628A52000DF094 /* Assets.xcassets */; };
@@ -35,6 +39,10 @@
 		C430CC2D297C6FF500349DE4 /* GooglePlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesService.swift; sourceTree = "<group>"; };
 		C430CC2F297C729A00349DE4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C4527C4C2976531B00B7CB6B /* What-to-Eat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "What-to-Eat-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C45747E9298EE8D90082C31F /* CreateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListView.swift; sourceTree = "<group>"; };
+		C460B16129920EAC00A53061 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		C460B1642992101F00A53061 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
+		C460B166299212E800A53061 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
 		C46E321929628A50000DF094 /* What to Eat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What to Eat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46E321C29628A50000DF094 /* What_to_EatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_to_EatApp.swift; sourceTree = "<group>"; };
 		C46E321E29628A50000DF094 /* InitialLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLaunchView.swift; sourceTree = "<group>"; };
@@ -82,6 +90,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C460B1632992100A00A53061 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C460B1642992101F00A53061 /* RoundedShape.swift */,
+				C460B166299212E800A53061 /* CustomInputView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		C46E321029628A50000DF094 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +123,7 @@
 				C46E321C29628A50000DF094 /* What_to_EatApp.swift */,
 				C4F8FC9C297D982200834E3C /* BrandingColors.swift */,
 				C46E323E29628E6A000DF094 /* GoogleService-Info.plist */,
+				C460B1632992100A00A53061 /* Components */,
 				C429DCA329633A7100B23852 /* Models */,
 				C46E323C29628D7F000DF094 /* Views */,
 				C46E323D29628D92000DF094 /* Services */,
@@ -128,6 +146,8 @@
 			children = (
 				C46E321E29628A50000DF094 /* InitialLaunchView.swift */,
 				C4AC893D297C420F00F95818 /* TabView.swift */,
+				C45747E9298EE8D90082C31F /* CreateListView.swift */,
+				C460B16129920EAC00A53061 /* SignInView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,10 +251,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C429DCA529633A8400B23852 /* CurrentLoggedUser.swift in Sources */,
+				C45747EA298EE8D90082C31F /* CreateListView.swift in Sources */,
 				C46E323B29628D79000DF094 /* MailchimpMasterService.swift in Sources */,
 				C430CC2E297C6FF500349DE4 /* GooglePlacesService.swift in Sources */,
 				C46E321F29628A50000DF094 /* InitialLaunchView.swift in Sources */,
 				C478EEDC29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift in Sources */,
+				C460B167299212E800A53061 /* CustomInputView.swift in Sources */,
+				C460B16229920EAC00A53061 /* SignInView.swift in Sources */,
+				C460B1652992101F00A53061 /* RoundedShape.swift in Sources */,
 				C4AC893E297C420F00F95818 /* TabView.swift in Sources */,
 				C4F8FC9D297D982300834E3C /* BrandingColors.swift in Sources */,
 				C46E321D29628A50000DF094 /* What_to_EatApp.swift in Sources */,
