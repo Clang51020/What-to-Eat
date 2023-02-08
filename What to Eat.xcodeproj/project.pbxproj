@@ -13,6 +13,8 @@
 		C43A71C3296A1AFA0061538A /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = C43A71C2296A1AFA0061538A /* RevenueCat */; };
 		C43A71C6296A1CE60061538A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C43A71C5296A1CE60061538A /* FirebaseMessaging */; };
 		C45747EA298EE8D90082C31F /* CreateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45747E9298EE8D90082C31F /* CreateListView.swift */; };
+		C458703129931181007E0E6C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458703029931181007E0E6C /* SignUpView.swift */; };
+		C45870352993297B007E0E6C /* StateCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45870342993297B007E0E6C /* StateCheckView.swift */; };
 		C460B16229920EAC00A53061 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460B16129920EAC00A53061 /* SignInView.swift */; };
 		C460B1652992101F00A53061 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460B1642992101F00A53061 /* RoundedShape.swift */; };
 		C460B167299212E800A53061 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C460B166299212E800A53061 /* CustomInputView.swift */; };
@@ -40,6 +42,8 @@
 		C430CC2F297C729A00349DE4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C4527C4C2976531B00B7CB6B /* What-to-Eat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "What-to-Eat-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C45747E9298EE8D90082C31F /* CreateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListView.swift; sourceTree = "<group>"; };
+		C458703029931181007E0E6C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		C45870342993297B007E0E6C /* StateCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateCheckView.swift; sourceTree = "<group>"; };
 		C460B16129920EAC00A53061 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		C460B1642992101F00A53061 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 		C460B166299212E800A53061 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
@@ -146,8 +150,10 @@
 			children = (
 				C46E321E29628A50000DF094 /* InitialLaunchView.swift */,
 				C4AC893D297C420F00F95818 /* TabView.swift */,
+				C45870342993297B007E0E6C /* StateCheckView.swift */,
 				C45747E9298EE8D90082C31F /* CreateListView.swift */,
 				C460B16129920EAC00A53061 /* SignInView.swift */,
+				C458703029931181007E0E6C /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C429DCA529633A8400B23852 /* CurrentLoggedUser.swift in Sources */,
+				C458703129931181007E0E6C /* SignUpView.swift in Sources */,
 				C45747EA298EE8D90082C31F /* CreateListView.swift in Sources */,
 				C46E323B29628D79000DF094 /* MailchimpMasterService.swift in Sources */,
 				C430CC2E297C6FF500349DE4 /* GooglePlacesService.swift in Sources */,
@@ -258,6 +265,7 @@
 				C478EEDC29760B8400C1FED9 /* FirebaseAnalyticsMaster.swift in Sources */,
 				C460B167299212E800A53061 /* CustomInputView.swift in Sources */,
 				C460B16229920EAC00A53061 /* SignInView.swift in Sources */,
+				C45870352993297B007E0E6C /* StateCheckView.swift in Sources */,
 				C460B1652992101F00A53061 /* RoundedShape.swift in Sources */,
 				C4AC893E297C420F00F95818 /* TabView.swift in Sources */,
 				C4F8FC9D297D982300834E3C /* BrandingColors.swift in Sources */,

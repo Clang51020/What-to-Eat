@@ -10,6 +10,7 @@ import SwiftUI
 struct SignInView: View {
     @State var email: String = ""
     @State var password: String = ""
+    @State var signUpShown: Bool = false
     
     var body: some View {
         NavigationView {
@@ -21,6 +22,8 @@ struct SignInView: View {
                     signInButton
                     Spacer()
                     footerInfo
+                }.fullScreenCover(isPresented: $signUpShown) {
+                    SignUpView(signUpShown: $signUpShown)
                 }
             }
         }
@@ -32,7 +35,7 @@ extension SignInView {
         ZStack(alignment:.leading) {
             Rectangle()
                 .frame(maxWidth: .infinity)
-                .frame(height: 250)
+                .frame(height: 300)
                 .clipShape(RoundedShape(corners: [.bottomRight]))
                 .foregroundColor(.brandPurple)
                 .ignoresSafeArea()
@@ -65,13 +68,12 @@ extension SignInView {
     
     var footerInfo: some View {
         VStack{
-            NavigationLink {
-                TabView()
-                    .toolbar(.hidden)
-            } label: {
+            Button(action: {
+                signUpShown = true
+            }, label: {
                 Text("Don't have an account? Sign Up")
                     .foregroundColor(.brandPurple)
-            }
+            })
             NavigationLink {
                 //Forgot password screen
             } label: {

@@ -15,9 +15,9 @@ class FirebaseMaster: ObservableObject {
     var auth: Auth // on initialization stores the Auth.auth() service.
     var firestore: Firestore // on initialization stores the Firestore.firestore() service.
     var storage: Storage // on initialization stores the Storage.storage() service.
+    static let shared = FirebaseMaster()
     @Published var currentSignedInUser: CurrentLoggedUser? // value that stores the current signed in users information after authenticated
-    @AppStorage("userSignedIn") var userSignedIn: Bool = false // stored value to persist login state for user when closing app
-    @AppStorage("UserOnboarded") var userOnboarded: Bool = false // store value to persist user being onboarded after first intial launch
+    @Published var signedIn = UserDefaults.standard.bool(forKey: "SignedIn") // stored value to persist login state for user when closing app
     
     init() {
         self.auth = Auth.auth()
@@ -42,7 +42,7 @@ class FirebaseMaster: ObservableObject {
                 return
             }
             // if no error then set the user state to logged in
-            self.userSignedIn = true
+            UserDefaults.standard.setValue(true, forKey: "SignedIn")
             self.getUserData(id: resultUser?.user.uid ?? "")
         }
     }
@@ -68,9 +68,9 @@ class FirebaseMaster: ObservableObject {
             if User != nil {
                 guard let userID = self.auth.currentUser?.uid else { return }
                 self.getUserData(id: userID)
-                self.userSignedIn = true
+                UserDefaults.standard.setValue(true, forKey: "SignedIn")
             } else {
-                self.userSignedIn = false
+                UserDefaults.standard.setValue(false, forKey: "SignedIn")
             }
         }
     }

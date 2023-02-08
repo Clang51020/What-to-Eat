@@ -24,8 +24,6 @@ struct What_to_EatApp: App {
     var body: some Scene {
         WindowGroup {
             InitialLaunchView()
-                .environmentObject(fbMaster)
-                .environmentObject(fbanalytics)
         }
     }
 }
